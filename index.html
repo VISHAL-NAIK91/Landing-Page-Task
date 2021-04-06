@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="{% static 'Page/css/styles.css'%}">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Demo Page</title>
+
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 style="background-color:tomato;">REAL ESTATE SERVICES <br>ARE BEING REDEFINED<br> TO A NEW HIGH!</h1>
+                </div>
+                <div class="">
+                    <a href="" class=""><i class=''></i></a>
+                    <a href="" class=""><i class='' ></i></a>
+                    <a href="" class=""><i class='' ></i></a>
+                </div>
+
+                <div class="home__img">    
+                    <img src="{% static 'Page/img/img.png'%}" alt="">
+                </div>
+            </section>
+
+            <h1 class="section-title">Who we are?</h1>
+            <p style="background-color:powderblue;">With a consulting and advisory approach to real estate brokerage services, Address Advisors is one stop shop for all real estate brokerage solutions. With more than 100+ years of consolidated experience, Address Advisors has grown from a boutique real estate firm to a leading property consulting organisation. True to the spirit of our name, we play both advisory and consultancy roles for our clients to find them the best addresses across all asset classes whether, owned, rented or shared!</p>
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Work</h2>
+
+                <div class="work__container bd-grid">
+                    <div class="work__img">
+                        <img src="{% static 'Page/img/img_1.png'%}" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="{% static 'Page/img/img_2.png'%}" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="{% static 'Page/img/img_3.png'%}" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="{% static 'Page/img/img_4.png'%}" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="{% static 'Page/img/img_5.png'%}" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="{% static 'Page/img/img_6.png'%}" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="details" class="contact__form" method="post">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Name" id="name" class="contact__input" name="name" required>
+                        <input type="email" placeholder="Email" id="email" class="contact__input" name="email" required >
+                        <input type="tel" placeholder="Phonenumber" id="phone" class="contact__input" name="phone" required >
+                        <textarea  class="contact__input" id="desc" rows="3" name="desc"  required></textarea>
+                        <input type="submit"  class="contact__button button">
+                    </form>
+
+
+                </div>
+
+            </section>
+        </main>
+
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Address Advisors</p>
+            <div class="footer__social">
+                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+            </div>
+            <p>&#169; 2020 copyright all right reserved</p>
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="{% static 'Page/js/main.js'%}"></script>
+    </body>
+</html>
